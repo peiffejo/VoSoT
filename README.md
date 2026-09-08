@@ -27,32 +27,29 @@ python main.py
 
 ## Download
 
-### Latest build
+### Latest release
 
-| Platform | File | Size |
-|----------|------|------|
-| Linux 64-bit | [`dist/MicMeasurement`](./dist/MicMeasurement) | ~90 MB |
+The easiest way to get the app is from the [Releases](https://github.com/peiffejo/VoSoT/releases/latest) page.
 
-> The Linux build was generated with PyInstaller. It is a single executable file.
-> To run it from the terminal:
->
-> ```bash
-> ./dist/MicMeasurement
-> ```
+| Platform | Asset | Notes |
+|----------|-------|-------|
+| Linux 64-bit | `MicMeasurement` | Single executable, built with PyInstaller |
 
-### GitHub Releases (recommended)
-
-For pre-built binaries for Windows, macOS and Linux, see the [Releases](https://github.com/DEIN_USERNAME/MicMeasurement/releases) page.
-
-Replace `DEIN_USERNAME` with your GitHub username once the repository is published.
-
-## Build from source with PyInstaller
+After downloading, make it executable and run it from a terminal:
 
 ```bash
-python -m PyInstaller main.spec
+chmod +x MicMeasurement
+./MicMeasurement
 ```
 
-The output is written to `dist/MicMeasurement`.
+### Run from source
+
+```bash
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python main.py
+```
 
 ## Project structure
 
